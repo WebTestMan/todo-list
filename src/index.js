@@ -1,5 +1,11 @@
 import "./styles.css";
 
-const message = 'Hello World!'
+// tabs for new lists/projects
 
-console.log(message)
+// to do card object
+
+// title, description, dueDate, priority, notes, checklist
+
+// todo logic
+
+// dom manipulation
