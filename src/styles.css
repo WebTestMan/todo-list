@@ -1,3 +1,33 @@
+:root {
+    --background-color: rgb(240, 237, 141);
+    --alt-background-colour: whitesmoke;
+    --text-colour: #03460e;
+    --global-padding: 6px;
+    --border-radius: 8px;
+    --box-shadow: 2px 2px 4px var(--text-colour);
+}
+
 * {
     padding: 8px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(100px, 6fr));
+}
+
+.grid-header {
+    grid-area: 1/1/1/3;
+}
+
+.todo-card {
+    border: solid;
+    border-radius: 8px;
+}
+
+.grid-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(100px, 6fr));
 }
