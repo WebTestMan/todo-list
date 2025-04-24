@@ -1,12 +1,12 @@
 :root {
-    --background-color: rgb(177, 212, 242);
-    --alt-background-colour: rgb(37, 145, 240);
+    --background-color: rgb(207, 228, 246);
+    --alt-background-colour: rgb(136, 195, 246);
+    --dark-background-colour: rgb(37, 145, 240);
     --text-colour: #5c0303;
     --global-padding: 6px;
     --border-radius: 8px;
     --box-shadow: 2px 2px 4px var(--text-colour);
     --hover-shadow: 4px 4px 6px var(--alt-background-colour);
-    ;
     --button-padding: 8px 20px;
     --hover-padding: 10px 30px;
 }
@@ -19,7 +19,7 @@
 
 button {
     border-radius: var(--border-radius);
-    background-color: var(--alt-background-colour);
+    background-color: var(--dark-background-colour);
     color: var(--background-color);
     border: white;
     padding: var(--button-padding);
@@ -29,28 +29,28 @@ button:hover {
     color: var(--text-colour);
     background-color: var(--background-color);
     padding: var(--hover-padding);
-    border: solid var(--alt-background-colour);
+    border: solid var(--dark-background-colour);
+}
+
+.page-title {
+    grid-column: 1/3;
+}
+
+.page-title * {
+    background-color: var(--alt-background-colour);
 }
 
 .grid-container {
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(100px, 6fr)); */
-
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 1fr 5fr 1fr;
-
-    gap: 4px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 6fr));
+    grid-gap: 1em;
 }
-
-.grid-header {
-    grid-column: 1 / 3;
-    background-color: var(--alt-background-colour);
-}
-
 
 .grid-sidebar {
-    grid-row: 2 / 4;
+    grid-area: 2 / 1 / 3 / 2;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
 }
 
 .todo-card {
@@ -66,7 +66,7 @@ button:hover {
 
 .grid-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(100px, 2fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 6px;
+    grid-row: 2/3;
 }
