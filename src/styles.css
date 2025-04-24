@@ -1,3 +1,5 @@
+@import url(https://fonts.bunny.net/css?family=abeezee:400);
+
 :root {
     --background-color: rgb(207, 228, 246);
     --alt-background-colour: rgb(136, 195, 246);
@@ -15,6 +17,7 @@
     padding: 8px;
     background-color: var(--background-color);
     color: var(--text-colour);
+    font-family: 'ABeeZee', Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
 }
 
 button {
@@ -42,7 +45,9 @@ button:hover {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 6fr));
+    grid-template-columns: repeat(auto-fill, minmax(500px, 6fr));
+    grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-flow: row;
     grid-gap: 1em;
 }
 
@@ -51,6 +56,7 @@ button:hover {
     max-width: 300px;
     display: flex;
     flex-direction: column;
+    resize: horizontal;
 }
 
 .todo-card {

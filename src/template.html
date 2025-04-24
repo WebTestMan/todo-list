@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/nanook" type="text/css" />
     <title>Document</title>
 </head>
 
@@ -12,10 +13,10 @@
     <div class="grid-container">
         <div class="page-title">
             <h2>Lister</h2>
-            <h4><em>The</em> to do tasker!</h4>
+            <h4>The<em>BEST</em>to do tasker!</h4>
         </div>
         <div class="grid-sidebar">
-            <form>
+            <form id="new-todo-form">
                 <div>
                     <label for="title">Title:</label>
                     <input type="text" id="title" name="title" placeholder="Title...">
@@ -37,8 +38,9 @@
                     </select>
 
                 </div>
+                <button id="new-to-do-btn">New Item...</button>
             </form>
-            <button id="new-to-do-btn">New Item...</button>
+
         </div>
         <div class="grid-content">
             <div class="todo-card">to do card...</div>
