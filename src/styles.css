@@ -1,9 +1,9 @@
 @import url(https://fonts.bunny.net/css?family=abeezee:400);
 
 :root {
-    --background-color: rgb(207, 228, 246);
-    --alt-background-colour: rgb(136, 195, 246);
-    --dark-background-colour: rgb(37, 145, 240);
+    --background-color: rgb(225, 239, 251);
+    --alt-background-colour: rgb(160, 206, 247);
+    --dark-background-colour: rgb(57, 158, 247);
     --text-colour: #5c0303;
     --global-padding: 6px;
     --border-radius: 8px;
@@ -11,6 +11,9 @@
     --hover-shadow: 4px 4px 6px var(--alt-background-colour);
     --button-padding: 8px 20px;
     --hover-padding: 10px 30px;
+    --high-priority: #f70505;
+    --med-priority: #f7f705;
+    --low-priority: #1df705;
 }
 
 * {
@@ -29,7 +32,7 @@ button {
 }
 
 button:hover {
-    color: var(--text-colour);
+    color: var(--dark-background-colour);
     background-color: var(--background-color);
     padding: var(--hover-padding);
     border: solid var(--dark-background-colour);
@@ -82,4 +85,16 @@ textarea:focus {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 6px;
     grid-row: 2/3;
+}
+
+.high {
+    color: var(--high-priority);
+}
+
+.medium {
+    color: var(--med-priority);
+}
+
+.low {
+    color: var(--low-priority);
 }
