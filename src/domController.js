@@ -16,14 +16,36 @@ const domController = (function () {
         contentArray.push(toDoDescription);
 
         const toDoDueDate = document.createElement('p');
-        toDoDueDate.innerText = toDoCard.getDueDate();
+        toDoDueDate.innerText = `Due: ${toDoCard.getDueDate()}`;
         contentArray.push(toDoDueDate);
 
         const toDoPriority = document.createElement('h4');
         const priority = toDoCard.getPriority();
-        toDoPriority.innerText = priority;
+        toDoPriority.innerText = `Priority: ${priority}`;
         toDoPriority.classList.add(priority);
         contentArray.push(toDoPriority);
+
+        const completedDiv = document.createElement('div');
+        const completedLabel = document.createElement('label');
+        const toDoCompleted = document.createElement('input');
+        const completedText = document.createElement('p');
+
+        completedLabel.setAttribute('for', 'completed');
+        completedLabel.innerText = 'Completed?'
+
+        completedText.innerText = toDoCard.getCompleted();
+
+        toDoCompleted.setAttribute('type', 'checkbox');
+
+        toDoCompleted.addEventListener('click', () => {
+            toDoCard.setCompleted();
+            completedText.innerText = toDoCard.getCompleted();
+        })
+        completedDiv.appendChild(completedLabel);
+        completedDiv.appendChild(completedText);
+        completedDiv.appendChild(toDoCompleted);
+
+        contentArray.push(completedDiv);
 
         contentArray.forEach(element => {
             newToDoCard.appendChild(element);
@@ -31,22 +53,13 @@ const domController = (function () {
 
         const toDoGridDiv = document.querySelector('.grid-content');
         toDoGridDiv.appendChild(newToDoCard);
-
-        // const createNewToDoCardForm = document.getElementById('new-todo-form');
-        // createNewToDoCardForm.addEventListener('submit', (e) => {
-        //     e.preventDefault();
-        //     const title = document.getElementById('title').value;
-        //     const description = document.getElementById('description').value;
-        //     const dueDate = document.getElementById('dueDate').value;
-        //     const priority = document.getElementById('priority').options[e.selectedIndex].value;
-
-        //     const newToDoCard = new ToDoCard(title, description, dueDate, priority);
-        //     domController.createNewToDoCard(newToDoCard);
-
-        //     createNewToDoCardForm.reset();
-        // });
     }
-    return { createNewToDoCard }
+
+const createNewProject = () => {
+
+}
+
+    return { createNewToDoCard, createNewProject }
 })();
 
 export { domController };

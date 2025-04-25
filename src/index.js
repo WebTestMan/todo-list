@@ -1,16 +1,8 @@
 import { domController } from "./domController";
 import "./styles.css";
 import ToDoCard from "./toDo.js";
+import ProjectPage from "./projectPage.js";
 
-// tabs for new lists/projects
-
-// to do card object
-
-// title, description, dueDate, priority, notes, checklist
-
-// todo logic
-
-// dom manipulation
 
 console.log('Hello World!');
 
@@ -28,3 +20,8 @@ createNewToDoCardForm.addEventListener('submit', (e) => {
     createNewToDoCardForm.reset();
 });
 
+const createNewProjectBtn = document.getElementById('new-project-btn');
+createNewProjectBtn.addEventListener('click', () => {
+    const projectPage = new ProjectPage('test');
+    projectPage.addProjectPageBtn();
+})
