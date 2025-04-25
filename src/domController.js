@@ -36,6 +36,7 @@ const domController = (function () {
         completedText.innerText = toDoCard.getCompleted();
 
         toDoCompleted.setAttribute('type', 'checkbox');
+        toDoCompleted.setAttribute('id', 'completed');
 
         toDoCompleted.addEventListener('click', () => {
             toDoCard.setCompleted();
