@@ -4,8 +4,10 @@ export default class ToDoCard {
         this.description = description;
         this.dueDate = dueDate;
         this.priority = priority;
+        this.completed = false;
     }
 
+    // Getters
     getTitle() {
         return this.title;
     }
@@ -17,5 +19,18 @@ export default class ToDoCard {
     }
     getPriority() {
         return this.priority;
+    }
+
+    getCompleted() {
+        return this.completed;
+    }
+
+    // Setters
+    setCompleted() {
+        this.completed = true;
+    }
+
+    setDueDate(newDate) {
+        this.dueDate = newDate;
     }
 }
