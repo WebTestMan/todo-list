@@ -15,6 +15,10 @@
         <div class="page-title">
             <h2>Lister</h2>
             <h4>The<em>BEST</em>to do tasker!</h4>
+
+            <div>
+                <button id="new-project-btn">New Project?</button>
+            </div>
         </div>
 
         <div class="grid-sidebar">
@@ -23,19 +27,27 @@
                 <form>
                     <div>
                         <label for="title">Title:</label>
+                    </div>
+                    <div>
                         <input type="text" id="title" name="title" placeholder="Title..." maxlength="256">
                     </div>
                     <div>
                         <label for="description">Description:</label>
+                    </div>
+                    <div>
                         <textarea type="text" id="description" name="description"
                             placeholder="Description..."></textarea>
                     </div>
                     <div>
                         <label for="dueDate">Due Date:</label>
+                    </div>
+                    <div>
                         <input type="date" id="dueDate" name="dueDate">
                     </div>
                     <div>
                         <label for="priority-select">Priority:</label>
+                    </div>
+                    <div>
                         <select name="priority" id="priority-select" required>
                             <option value="high">High</option>
                             <option value="medium">Medium</option>
@@ -46,9 +58,7 @@
                     <button id="new-to-do-btn" type="submit">New Lister Item...</button>
                 </form>
             </div>
-            <div>
-                <button id="new-project-btn">New Project?</button>
-            </div>
+
         </div>
         <div class="grid-content">
         </div>
