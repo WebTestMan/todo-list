@@ -2,6 +2,7 @@ import { domController } from "./domController";
 import "./styles.css";
 import ToDoCard from "./toDo.js";
 import ProjectPage from "./projectPage.js";
+import { imageCarousel } from "./imageCarousel.js";
 
 console.log("Hello World!");
 
@@ -16,7 +17,7 @@ createNewToDoCardForm.addEventListener("submit", (e) => {
   const newToDoCard = new ToDoCard(title, description, dueDate, priority);
   domController.createNewToDoCard(newToDoCard);
 
-  createNewToDoCardForm.reset();
+  //   createNewToDoCardForm.reset();
 });
 
 const createNewProjectBtn = document.getElementById("new-project-btn");
@@ -25,14 +26,15 @@ createNewProjectBtn.addEventListener("click", () => {
   projectPage.addProjectPageBtn();
 });
 
-function myFunction() {
+const dropDownDiv = document.getElementById("show-drop-down");
+dropDownDiv.addEventListener("click", () => {
   console.log("my function called...");
   document
     .getElementById("drop-down-buttons")
     .classList.toggle("drop-down-visible");
-}
+});
 
-const dropDownDiv = document.getElementById("show-drop-down");
-dropDownDiv.addEventListener("click", () => {
-  myFunction();
+const imageCarouselButton = document.getElementById("image-carousel");
+imageCarouselButton.addEventListener("click", () => {
+  imageCarousel.drawImageCarouselPage();
 });
