@@ -1,69 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/nanook" type="text/css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="https://fontlibrary.org//face/nanook"
+      type="text/css"
+    />
     <title>Document</title>
-</head>
-<header>This is a header...</header>
+  </head>
+  <header>This is a header...</header>
 
-<body>
-
+  <body>
     <div class="grid-container">
-        <div class="page-title">
-            <h2>Lister</h2>
-            <h4>The<em>BEST</em>to do tasker!</h4>
+      <div class="page-title">
+        <h2>Lister</h2>
+        <h4>The<em>BEST</em>to do tasker!</h4>
 
+        <div>
+          <button id="new-project-btn">New Project?</button>
+        </div>
+      </div>
+
+      <div class="grid-sidebar">
+        <div class="project-pages"></div>
+        <div id="new-todo-form">
+          <form>
             <div>
-                <button id="new-project-btn">New Project?</button>
+              <label for="title">Title:</label>
             </div>
-        </div>
-
-        <div class="grid-sidebar">
-            <div class="project-pages"></div>
-            <div id="new-todo-form">
-                <form>
-                    <div>
-                        <label for="title">Title:</label>
-                    </div>
-                    <div>
-                        <input type="text" id="title" name="title" placeholder="Title..." maxlength="256">
-                    </div>
-                    <div>
-                        <label for="description">Description:</label>
-                    </div>
-                    <div>
-                        <textarea type="text" id="description" name="description"
-                            placeholder="Description..."></textarea>
-                    </div>
-                    <div>
-                        <label for="dueDate">Due Date:</label>
-                    </div>
-                    <div>
-                        <input type="date" id="dueDate" name="dueDate">
-                    </div>
-                    <div>
-                        <label for="priority-select">Priority:</label>
-                    </div>
-                    <div>
-                        <select name="priority" id="priority-select" required>
-                            <option value="high">High</option>
-                            <option value="medium">Medium</option>
-                            <option value="low">Low</option>
-                        </select>
-                    </div>
-
-                    <button id="new-to-do-btn" type="submit">New Lister Item...</button>
-                </form>
+            <div>
+              <input
+                type="text"
+                id="title"
+                name="title"
+                placeholder="Title..."
+                maxlength="256"
+              />
+            </div>
+            <div>
+              <label for="description">Description:</label>
+            </div>
+            <div>
+              <textarea
+                type="text"
+                id="description"
+                name="description"
+                placeholder="Description..."
+              ></textarea>
+            </div>
+            <div>
+              <label for="dueDate">Due Date:</label>
+            </div>
+            <div>
+              <input type="date" id="dueDate" name="dueDate" />
+            </div>
+            <div>
+              <label for="priority-select">Priority:</label>
+            </div>
+            <div>
+              <select name="priority" id="priority-select" required>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+              </select>
             </div>
 
+            <button id="new-to-do-btn" type="submit">New Lister Item...</button>
+          </form>
         </div>
-        <div class="grid-content">
-        </div>
+      </div>
+      <div class="grid-content"></div>
     </div>
-</body>
-<footer>This is a footer</footer>
-
+  </body>
+  <footer>This is a footer</footer>
 </html>
