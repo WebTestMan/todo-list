@@ -1,11 +1,13 @@
+import { domController } from "./domController";
 export default class ProjectPage {
   constructor(projectName) {
     this.projectName = projectName;
   }
 
   drawNewProjectPage() {
-    const contentPage = document.querySelector(".grid-content");
-    contentPage.innerHTML = "";
+    // const contentPage = document.querySelector(".grid-content");
+    // contentPage.innerHTML = "";
+    const contentPage = domController.clearMainContentContainer();
     const projectPageDiv = document.createElement("div");
     const projectPageTitle = document.createElement("h2");
     projectPageTitle.innerText = this.projectName;

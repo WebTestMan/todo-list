@@ -58,7 +58,13 @@ const domController = (function () {
 
   const createNewProject = () => {};
 
-  return { createNewToDoCard, createNewProject };
+  const clearMainContentContainer = () => {
+    const contentPage = document.querySelector(".grid-content");
+    contentPage.innerHTML = "";
+    return contentPage;
+  };
+
+  return { createNewToDoCard, createNewProject, clearMainContentContainer };
 })();
 
 export { domController };
