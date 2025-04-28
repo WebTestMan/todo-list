@@ -24,3 +24,15 @@ createNewProjectBtn.addEventListener("click", () => {
   const projectPage = new ProjectPage("test");
   projectPage.addProjectPageBtn();
 });
+
+function myFunction() {
+  console.log("my function called...");
+  document
+    .getElementById("drop-down-buttons")
+    .classList.toggle("drop-down-visible");
+}
+
+const dropDownDiv = document.getElementById("show-drop-down");
+dropDownDiv.addEventListener("click", () => {
+  myFunction();
+});

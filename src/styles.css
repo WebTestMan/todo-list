@@ -62,9 +62,10 @@ textarea:focus {
   background-color: var(--alt-background-colour);
 }
 
-#new-project-btn {
+.alt-btn {
   background-color: var(--dark-background-colour);
   color: var(--background-color);
+  margin: 8px;
 }
 
 .grid-container {
@@ -126,4 +127,20 @@ input,
 select,
 textarea {
   background-color: white;
+}
+
+.drop-down {
+  display: inline-block;
+}
+
+.drop-down-not-visible {
+  display: none;
+}
+
+.drop-down-not-visible button {
+  display: block;
+}
+
+.drop-down-visible {
+  display: block;
 }
