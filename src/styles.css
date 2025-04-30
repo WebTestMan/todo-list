@@ -94,6 +94,25 @@ textarea:focus {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   padding: var(--global-padding);
+  max-width: 400px;
+}
+
+.todo-card h3 {
+  font-weight: 800;
+}
+
+.todo-card * {
+  padding: 2px;
+}
+
+.todo-card div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.todo-card div * {
+  align-self: center;
+  justify-self: start;
 }
 
 .todo-card:hover {
