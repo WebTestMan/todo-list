@@ -1,3 +1,5 @@
+import { format } from "date-fns";
+
 export default class ToDoCard {
   constructor(title, description, dueDate, priority) {
     this.title = title;
@@ -17,6 +19,10 @@ export default class ToDoCard {
   getDueDate() {
     return this.dueDate;
   }
+  getDueDateReadable() {
+    return format(this.dueDate, "dd-MMM-yyyy");
+  }
+
   getPriority() {
     return this.priority;
   }
@@ -25,9 +31,21 @@ export default class ToDoCard {
     return this.completed;
   }
 
+  getCompletedReadable() {
+    if (this.completed === true) {
+      return "Yes";
+    } else {
+      return "No";
+    }
+  }
+
   // Setters
   setCompleted() {
-    this.completed = true;
+    if (this.completed === false) {
+      this.completed = true;
+    } else {
+      this.completed = false;
+    }
   }
 
   setDueDate(newDate) {

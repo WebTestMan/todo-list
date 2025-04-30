@@ -16,10 +16,10 @@ const domController = (function () {
     contentArray.push(toDoDescription);
 
     const toDoDueDate = document.createElement("p");
-    toDoDueDate.innerText = `Due: ${toDoCard.getDueDate()}`;
+    toDoDueDate.innerText = `Due: ${toDoCard.getDueDateReadable()}`;
     contentArray.push(toDoDueDate);
 
-    const toDoPriority = document.createElement("h4");
+    const toDoPriority = document.createElement("p");
     const priority = toDoCard.getPriority();
     toDoPriority.innerText = `Priority: ${priority}`;
     toDoPriority.classList.add(priority);
@@ -33,14 +33,14 @@ const domController = (function () {
     completedLabel.setAttribute("for", "completed");
     completedLabel.innerText = "Completed?";
 
-    completedText.innerText = toDoCard.getCompleted();
+    completedText.innerText = toDoCard.getCompletedReadable();
 
     toDoCompleted.setAttribute("type", "checkbox");
     toDoCompleted.setAttribute("id", "completed");
 
     toDoCompleted.addEventListener("click", () => {
       toDoCard.setCompleted();
-      completedText.innerText = toDoCard.getCompleted();
+      completedText.innerText = toDoCard.getCompletedReadable();
     });
     completedDiv.appendChild(completedLabel);
     completedDiv.appendChild(completedText);
