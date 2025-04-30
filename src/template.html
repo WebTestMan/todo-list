@@ -36,10 +36,10 @@
         <div class="project-pages"></div>
         <div id="new-todo-form">
           <form>
-            <div>
+            <div class="field-input">
               <label for="title">Title:</label>
-            </div>
-            <div>
+            <!-- </div>
+            <div> -->
               <input
                 type="text"
                 id="title"
@@ -48,10 +48,9 @@
                 maxlength="256"
               />
             </div>
-            <div>
+            <div class="field-input">
               <label for="description">Description:</label>
-            </div>
-            <div>
+
               <textarea
                 type="text"
                 id="description"
@@ -59,24 +58,25 @@
                 placeholder="Description..."
               ></textarea>
             </div>
-            <div>
+            <div class="field-input">
               <label for="dueDate">Due Date:</label>
-            </div>
-            <div>
+
               <input type="date" id="dueDate" name="dueDate" />
             </div>
-            <div>
+            <div class="field-input">
               <label for="priority-select">Priority:</label>
-            </div>
-            <div>
+
               <select name="priority" id="priority-select" required>
                 <option value="high">High</option>
                 <option value="medium">Medium</option>
                 <option value="low">Low</option>
               </select>
             </div>
-
-            <button id="new-to-do-btn" type="submit">New Lister Item...</button>
+            <div>
+              <button id="new-to-do-btn" type="submit">
+                New Lister Item...
+              </button>
+            </div>
           </form>
         </div>
       </div>

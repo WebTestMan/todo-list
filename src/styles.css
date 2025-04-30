@@ -70,19 +70,23 @@ textarea:focus {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 6fr));
-  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
   grid-auto-flow: row;
   grid-gap: 1em;
 }
 
 .grid-sidebar {
   grid-area: 2 / 1 / 3 / 2;
-  max-width: 300px;
   display: flex;
   flex-direction: column;
   resize: horizontal;
   align-items: flex-start;
+}
+
+.field-input {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .todo-card {
