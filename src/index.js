@@ -28,7 +28,6 @@ createNewProjectBtn.addEventListener("click", () => {
 
 const dropDownDiv = document.getElementById("show-drop-down");
 dropDownDiv.addEventListener("click", () => {
-  console.log("my function called...");
   document
     .getElementById("drop-down-buttons")
     .classList.toggle("drop-down-visible");
@@ -38,3 +37,6 @@ const imageCarouselButton = document.getElementById("image-carousel");
 imageCarouselButton.addEventListener("click", () => {
   imageCarousel.drawImageCarouselPage();
 });
+
+const listerProjectBtn = document.getElementById("lister-projects");
+listerProjectBtn.addEventListener("click", () => {});
