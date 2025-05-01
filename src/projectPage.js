@@ -1,7 +1,9 @@
 import { domController } from "./domController";
+// import ToDoCard from "./toDo";
 export default class ProjectPage {
   constructor(projectName) {
     this.projectName = projectName;
+    this.projectToDoCards = [];
   }
 
   drawNewProjectPage() {
@@ -26,5 +28,9 @@ export default class ProjectPage {
     const pageTabs = document.querySelector(".project-pages");
     pageTabs.innerText = this.projectName;
     pageTabs.appendChild(projectBtn);
+  }
+
+  addCardToProject(ToDoCardBeingAdded) {
+    this.projectToDoCards.push(ToDoCardBeingAdded);
   }
 }

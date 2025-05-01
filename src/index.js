@@ -6,6 +6,11 @@ import { imageCarousel } from "./imageCarousel.js";
 
 console.log("Hello World!");
 
+const projectArray = [];
+const defaultProject = new ProjectPage("Default Project");
+projectArray.push(defaultProject);
+let currentProjectPage = projectArray[0];
+
 const createNewToDoCardForm = document.getElementById("new-todo-form");
 createNewToDoCardForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -15,9 +20,11 @@ createNewToDoCardForm.addEventListener("submit", (e) => {
   const priority = document.querySelector("#priority-select").value;
 
   const newToDoCard = new ToDoCard(title, description, dueDate, priority);
+  defaultProject.addCardToProject(newToDoCard);
   domController.createNewToDoCard(newToDoCard);
-
   //   createNewToDoCardForm.reset();
+  console.log(projectArray);
+  console.log(defaultProject);
 });
 
 const createNewProjectBtn = document.getElementById("new-project-btn");
