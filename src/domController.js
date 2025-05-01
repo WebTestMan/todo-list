@@ -56,15 +56,31 @@ const domController = (function () {
     toDoGridDiv.appendChild(newToDoCard);
   };
 
-  const createNewProject = () => {};
-
   const clearMainContentContainer = () => {
     const contentPage = document.querySelector(".grid-content");
     contentPage.innerHTML = "";
     return contentPage;
   };
 
-  return { createNewToDoCard, createNewProject, clearMainContentContainer };
+  const addBtn = (buttonName) => {
+    const newBtn = document.createElement("button");
+    newBtn.innerText = buttonName;
+    return newBtn;
+  };
+
+  const drawProjectToDoCards = (projectArray) => {
+    // const contentPage = clearMainContentContainer();
+    projectArray.forEach((toDoCard) => {
+      createNewToDoCard(toDoCard);
+    });
+  };
+
+  return {
+    createNewToDoCard,
+    clearMainContentContainer,
+    addBtn,
+    drawProjectToDoCards,
+  };
 })();
 
 export { domController };

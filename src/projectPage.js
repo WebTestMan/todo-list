@@ -1,4 +1,7 @@
+// import { domController } from "./domController";
+
 import { domController } from "./domController";
+
 // import ToDoCard from "./toDo";
 export default class ProjectPage {
   constructor(projectName) {
@@ -7,22 +10,22 @@ export default class ProjectPage {
   }
 
   drawNewProjectPage() {
-    // const contentPage = document.querySelector(".grid-content");
-    // contentPage.innerHTML = "";
+    contentPage.innerHTML = "";
     const contentPage = domController.clearMainContentContainer();
     const projectPageDiv = document.createElement("div");
     const projectPageTitle = document.createElement("h2");
     projectPageTitle.innerText = this.projectName;
     projectPageDiv.appendChild(projectPageTitle);
     contentPage.appendChild(projectPageDiv);
+    domController.drawProjectToDoCards(this.projectToDoCards);
   }
 
   addProjectPageBtn() {
-    const projectBtn = document.createElement("button");
+    const projectBtn = domController.addBtn(this.projectName);
     projectBtn.setAttribute("id", this.projectName);
-    projectBtn.innerText = this.projectName;
+    // projectBtn.innerText = this.projectName;
     projectBtn.addEventListener("click", () => {
-      this.drawNewProjectPage();
+      domController.createNewProject(this);
     });
 
     const pageTabs = document.querySelector(".project-pages");
