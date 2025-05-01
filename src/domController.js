@@ -1,5 +1,7 @@
 // import ToDoCard from "./toDo";
 
+// import ProjectPage from "./projectPage";
+
 const domController = (function () {
   const createNewToDoCard = (toDoCard) => {
     const newToDoCard = document.createElement("div");
@@ -62,7 +64,7 @@ const domController = (function () {
     return contentPage;
   };
 
-  const addBtn = (buttonName) => {
+  const createBtn = (buttonName) => {
     const newBtn = document.createElement("button");
     newBtn.innerText = buttonName;
     return newBtn;
@@ -75,11 +77,21 @@ const domController = (function () {
     });
   };
 
+  const createNewProject = (newProject) => {
+    const gridSideBarDiv = document.querySelector(".grid-sidebar");
+    const newProjectBtn = createBtn(newProject.getProjectName());
+    newProjectBtn.addEventListener("click", () => {
+      drawProjectToDoCards(newProject.getProjectToDoCards());
+    });
+    gridSideBarDiv.appendChild(newProjectBtn);
+  };
+
   return {
     createNewToDoCard,
     clearMainContentContainer,
-    addBtn,
+    createBtn,
     drawProjectToDoCards,
+    createNewProject,
   };
 })();
 

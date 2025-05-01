@@ -9,6 +9,14 @@ export default class ProjectPage {
     this.projectToDoCards = [];
   }
 
+  getProjectName() {
+    return this.projectName;
+  }
+
+  getProjectToDoCards() {
+    return this.projectToDoCards;
+  }
+
   drawNewProjectPage() {
     contentPage.innerHTML = "";
     const contentPage = domController.clearMainContentContainer();
@@ -21,7 +29,7 @@ export default class ProjectPage {
   }
 
   addProjectPageBtn() {
-    const projectBtn = domController.addBtn(this.projectName);
+    const projectBtn = domController.createBtn(this.projectName);
     projectBtn.setAttribute("id", this.projectName);
     // projectBtn.innerText = this.projectName;
     projectBtn.addEventListener("click", () => {
