@@ -64,9 +64,9 @@ const domController = (function () {
     return contentPage;
   };
 
-  const createBtn = (buttonName) => {
+  const createBtn = (buttonText) => {
     const newBtn = document.createElement("button");
-    newBtn.innerText = buttonName;
+    newBtn.innerText = buttonText;
     return newBtn;
   };
 
