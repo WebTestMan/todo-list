@@ -20,7 +20,11 @@ export default class ToDoCard {
     return this.dueDate;
   }
   getDueDateReadable() {
-    return format(this.dueDate, "dd-MMM-yyyy");
+    if (!this.dueDate) {
+      return "";
+    } else {
+      return format(this.dueDate, "dd-MMM-yyyy");
+    }
   }
 
   getPriority() {
